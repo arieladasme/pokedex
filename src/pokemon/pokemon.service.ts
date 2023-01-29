@@ -62,8 +62,12 @@ export class PokemonService {
   }
 
   async remove(id: string) {
-    const pokemon = await this.findOne(id)
-    await pokemon.deleteOne({ id })
+    /*  const pokemon = await this.findOne(id)
+    await pokemon.deleteOne({ id }) */
+
+    const result = await this.pokemonModel.findByIdAndDelete(id)
+    console.log(result)
+    return result
   }
 
   private handleExeptions(error: any) {
