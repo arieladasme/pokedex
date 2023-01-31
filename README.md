@@ -8,17 +8,22 @@
 $ yarn install
 ```
 
-## Running the app
-
-```bash
-# development
-$ yarn run start
-```
-
 ## Run database
 
 ```bash
-docker-compose up -d
+$ docker-compose up -d
+```
+
+## Clone archive and configure environment variables
+
+```bash
+.env.template to .env
+```
+
+## Running app on dev
+
+```bash
+$ yarn start:dev
 ```
 
 ## Rebuild database with seed
